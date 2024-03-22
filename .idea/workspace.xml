@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5fbd60f-d86c-40a0-9fba-3edc3eaa2595" name="Changes" comment="Install Cellery and Redis and update requirements.txt">
+    <list default="true" id="c5fbd60f-d86c-40a0-9fba-3edc3eaa2595" name="Changes" comment="Integrate Celery with Redis for asynchronous tasks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +138,8 @@
       <updated>1710835243022</updated>
       <workItem from="1710835296685" duration="4436000" />
       <workItem from="1710921610483" duration="6978000" />
-      <workItem from="1711080762052" duration="5210000" />
+      <workItem from="1711080762052" duration="6398000" />
+      <workItem from="1711147029839" duration="389000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -278,7 +277,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711135368276</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add simple Celery task for adding numbers">
+      <option name="closed" value="true" />
+      <created>1711136316483</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1711136316483</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Integrate Celery with Redis for asynchronous tasks">
+      <option name="closed" value="true" />
+      <created>1711136402845</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1711136402845</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +325,9 @@
     <MESSAGE value="Add .gitignore file" />
     <MESSAGE value="Dockerize Django application with PostgreSQL" />
     <MESSAGE value="Install Cellery and Redis and update requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Install Cellery and Redis and update requirements.txt" />
+    <MESSAGE value="Add simple Celery task for adding numbers" />
+    <MESSAGE value="Integrate Celery with Redis for asynchronous tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrate Celery with Redis for asynchronous tasks" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/blog$manage.coverage" NAME="manage Coverage Results" MODIFIED="1710836145488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
