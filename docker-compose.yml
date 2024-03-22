@@ -6,6 +6,8 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 37182635
+  redis:
+    image: "redis:alpine"
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
@@ -21,3 +23,18 @@ services:
       DB_PORT: 5432
     depends_on:
       - db
+      - redis
+  celery:
+    build: .
+    command: celery -A blog worker --loglevel=info
+    volumes:
+      - .:/app
+    environment:
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: 37182635
+      DB_HOST: db
+      DB_PORT: 5432
+    depends_on:
+      - web
+      - redis
