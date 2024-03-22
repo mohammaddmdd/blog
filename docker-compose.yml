@@ -3,9 +3,9 @@ services:
   db:
     image: postgres:14
     environment:
-      POSTGRES_DB: mydatabase
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 37182635
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
@@ -14,9 +14,9 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DB_NAME: mydatabase
-      DB_USER: myuser
-      DB_PASSWORD: mypassword
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: 37182635
       DB_HOST: db
       DB_PORT: 5432
     depends_on:
