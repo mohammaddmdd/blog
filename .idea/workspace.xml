@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5fbd60f-d86c-40a0-9fba-3edc3eaa2595" name="Changes" comment="Apply authentication permissions to API endpoints">
+    <list default="true" id="c5fbd60f-d86c-40a0-9fba-3edc3eaa2595" name="Changes" comment="Install Redis and Django Redis Package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +139,7 @@
       <workItem from="1710921610483" duration="6978000" />
       <workItem from="1711080762052" duration="6398000" />
       <workItem from="1711147029839" duration="2959000" />
-      <workItem from="1711233803374" duration="9455000" />
+      <workItem from="1711233803374" duration="10249000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -381,7 +381,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711243622333</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Install Redis and Django Redis Package">
+      <option name="closed" value="true" />
+      <created>1711251611921</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1711251611921</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +407,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Define Post and Comment models" />
     <MESSAGE value="Config App settings.py" />
     <MESSAGE value="Add initial migrations for blog models" />
     <MESSAGE value="Install Django REST Framework and add to INSTALLED_APPS" />
@@ -424,7 +431,8 @@
     <MESSAGE value="Modify the Registration View to Generate Tokens for New Users" />
     <MESSAGE value="Add Token Authentication Endpoint" />
     <MESSAGE value="Apply authentication permissions to API endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="Apply authentication permissions to API endpoints" />
+    <MESSAGE value="Install Redis and Django Redis Package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Install Redis and Django Redis Package" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/blog$manage.coverage" NAME="manage Coverage Results" MODIFIED="1710836145488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
