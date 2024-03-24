@@ -13,6 +13,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, related_name='comments', on_delete=models.CASCADE)
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='replies')
     text = models.TextField()
     email = models.EmailField()
     created_at = models.DateTimeField(auto_now_add=True)
