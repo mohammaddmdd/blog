@@ -1,8 +1,12 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
 from .models import Post, Comment
 from .serializers import PostSerializer, CommentSerializer
 from django.http import JsonResponse
 from .tasks import add
+
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
@@ -12,6 +16,24 @@ class PostViewSet(viewsets.ModelViewSet):
 class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+
+
+@api_view(['POST'])
+def create_comment(request):
+    serializer = CommentSerializer(data=request.data)
+    if serializer.is_valid():
+        parent_id = request.data.get('parent')
+        if parent_id is not None:
+            # Validate and set the parent comment
+            try:
+                parent_comment = Comment.objects.get(id=parent_id)
+                serializer.save(parent=parent_comment)
+            except Comment.DoesNotExist:
+                return Response({'error': 'Parent comment does not exist'}, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 def add_numbers(request):

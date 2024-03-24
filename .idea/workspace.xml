@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c5fbd60f-d86c-40a0-9fba-3edc3eaa2595" name="Changes" comment="Add GitHub Actions workflow for Django CI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_app/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +142,7 @@
       <workItem from="1710921610483" duration="6978000" />
       <workItem from="1711080762052" duration="6398000" />
       <workItem from="1711147029839" duration="2959000" />
+      <workItem from="1711233803374" duration="2106000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />

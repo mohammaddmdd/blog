@@ -10,3 +10,8 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = '__all__'
+
+    def get_replies(self, instance):
+        """Method to get replies of a comment."""
+        serializer = CommentSerializer(instance.replies.all(), many=True)
+        return serializer.data
