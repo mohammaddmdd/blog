@@ -1,7 +1,7 @@
 from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from rest_framework.authtoken.models import Token
 from .models import Post, Comment
 from .serializers import PostSerializer, CommentSerializer, UserSerializer
 from django.http import JsonResponse
@@ -51,6 +51,8 @@ def add_numbers(request):
 def register(request):
     serializer = UserSerializer(data=request.data)
     if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        user = serializer.save()
+        # Generate a token for the new user
+        token = Token.objects.create(user=user)
+        return Response({'user': serializer.data, 'token': token.key}, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
