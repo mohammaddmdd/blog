@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5fbd60f-d86c-40a0-9fba-3edc3eaa2595" name="Changes" comment="Dynamically Configure Redis in settings.py">
+    <list default="true" id="c5fbd60f-d86c-40a0-9fba-3edc3eaa2595" name="Changes" comment="Explicitly Set the Permission class for  Registration view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog_app/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/tests.py" afterDir="false" />
     </list>
@@ -140,7 +140,7 @@
       <workItem from="1710921610483" duration="6978000" />
       <workItem from="1711080762052" duration="6398000" />
       <workItem from="1711147029839" duration="2959000" />
-      <workItem from="1711233803374" duration="20079000" />
+      <workItem from="1711233803374" duration="21044000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -414,7 +414,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711337763783</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Add Model Tests And API Endpoint Tests">
+      <option name="closed" value="true" />
+      <created>1711339984760</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1711339984760</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Explicitly Set the Permission class for  Registration view">
+      <option name="closed" value="true" />
+      <created>1711340872461</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1711340872461</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,8 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add serializers for Post and Comment models" />
-    <MESSAGE value="Implement viewsets for Post and Comment models" />
     <MESSAGE value="Set up URL routing for blog API endpoints" />
     <MESSAGE value="Fix database issue by applying missing migrations" />
     <MESSAGE value="Add requirements.txt with project dependencies" />
@@ -457,7 +471,9 @@
     <MESSAGE value="Configure Caching in Django Settings" />
     <MESSAGE value="Implement caching for high traffic views" />
     <MESSAGE value="Dynamically Configure Redis in settings.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dynamically Configure Redis in settings.py" />
+    <MESSAGE value="Add Model Tests And API Endpoint Tests" />
+    <MESSAGE value="Explicitly Set the Permission class for  Registration view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Explicitly Set the Permission class for  Registration view" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/blog$manage.coverage" NAME="manage Coverage Results" MODIFIED="1710836145488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

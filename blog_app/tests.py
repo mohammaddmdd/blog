@@ -35,3 +35,20 @@ class PostAPITests(APITestCase):
         url = reverse('post-list')
         response = self.client.get(url, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+
+class UserRegistrationTest(APITestCase):
+    def test_user_registration(self):
+        url = reverse('register')
+        data = {'username': 'newuser', 'password': 'newpassword', 'email': 'user@example.com'}
+        response = self.client.post(url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertTrue('token' in response.data)
+
+
+class PostCreateTest(APITestCase):
+    def test_create_post_unauthenticated(self):
+        url = reverse('post-list')
+        data = {'title': 'Title', 'content': 'Content'}
+        response = self.client.post(url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
