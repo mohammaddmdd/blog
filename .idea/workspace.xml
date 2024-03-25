@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5fbd60f-d86c-40a0-9fba-3edc3eaa2595" name="Changes" comment="Configure Caching in Django Settings">
+    <list default="true" id="c5fbd60f-d86c-40a0-9fba-3edc3eaa2595" name="Changes" comment="Dynamically Configure Redis in settings.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_app/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +140,7 @@
       <workItem from="1710921610483" duration="6978000" />
       <workItem from="1711080762052" duration="6398000" />
       <workItem from="1711147029839" duration="2959000" />
-      <workItem from="1711233803374" duration="11723000" />
+      <workItem from="1711233803374" duration="20079000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -398,7 +398,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711277034034</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Implement caching for high traffic views">
+      <option name="closed" value="true" />
+      <created>1711279073818</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1711279073818</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Dynamically Configure Redis in settings.py">
+      <option name="closed" value="true" />
+      <created>1711337763783</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1711337763783</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,8 +432,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add initial migrations for blog models" />
-    <MESSAGE value="Install Django REST Framework and add to INSTALLED_APPS" />
     <MESSAGE value="Add serializers for Post and Comment models" />
     <MESSAGE value="Implement viewsets for Post and Comment models" />
     <MESSAGE value="Set up URL routing for blog API endpoints" />
@@ -441,7 +455,9 @@
     <MESSAGE value="Apply authentication permissions to API endpoints" />
     <MESSAGE value="Install Redis and Django Redis Package" />
     <MESSAGE value="Configure Caching in Django Settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configure Caching in Django Settings" />
+    <MESSAGE value="Implement caching for high traffic views" />
+    <MESSAGE value="Dynamically Configure Redis in settings.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dynamically Configure Redis in settings.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/blog$manage.coverage" NAME="manage Coverage Results" MODIFIED="1710836145488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
