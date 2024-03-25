@@ -7,7 +7,7 @@ from .serializers import PostSerializer, CommentSerializer, UserSerializer
 from django.http import JsonResponse
 from .tasks import add
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
 
@@ -59,7 +59,9 @@ def add_numbers(request):
     return JsonResponse({'status': 'The add task has been called. Check Celery for results.'})
 
 
+
 @api_view(['POST'])
+@permission_classes([AllowAny])
 def register(request):
     serializer = UserSerializer(data=request.data)
     if serializer.is_valid():
