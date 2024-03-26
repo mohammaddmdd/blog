@@ -11,9 +11,10 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_DB: postgres
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: 37182635
+          DB_HOST: localhost
+          DB_NAME: postgres
+          DB_USER: postgres
+          DB_PASSWORD: 37182635
         ports:
           - 5432:5432
         # Set health checks to wait until postgres is ready
