@@ -114,3 +114,15 @@ class UserSerializerTest(TestCase):
         user = self.serializer.save()
         self.assertTrue(User.objects.filter(username='testuser').exists())
         self.assertTrue(user.check_password(self.user_data['password']))
+
+
+from django.test import TestCase
+from .tasks import add
+from celery.result import EagerResult
+
+
+class TestCeleryTask(TestCase):
+    def test_add_task(self):
+        task_result = add.apply(args=(10, 32))
+        self.assertTrue(isinstance(task_result, EagerResult), "Task did not return an EagerResult")
+        self.assertEqual(task_result.result, 42, "The add task did not return the correct sum")
