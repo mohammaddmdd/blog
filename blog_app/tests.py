@@ -1,4 +1,3 @@
-# blog/tests.py
 from django.test import TestCase
 from .models import Post
 from django.urls import reverse
