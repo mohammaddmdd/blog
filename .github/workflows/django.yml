@@ -37,6 +37,7 @@ jobs:
     - name: Run migrations
       env:
         DB_HOST: postgres
+        DB_PASSWORD: 37182635
       run: |
         python manage.py migrate
     - name: Run tests
