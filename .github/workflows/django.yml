@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     services:
@@ -34,11 +33,6 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run migrations
-      env:
-        DB_HOST: postgres
-        DB_PASSWORD: 37182635
-        DB_NAME: postgres
-        DB_USER: postgres
       run: |
         python manage.py migrate
     - name: Run tests

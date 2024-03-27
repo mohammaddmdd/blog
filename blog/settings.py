@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': config('DB_NAME', default='postgres'),
         'USER': config('DB_USER', default='postgres'),
         'PASSWORD': config('DB_PASSWORD', default='your_password'),
-        'HOST': config('DB_HOST', default='postgres'),  # Service name as defined in docker-compose.yml
+        'HOST': config('DB_HOST', default='localhost'),  # Service name as defined in docker-compose.yml
         'PORT': config('DB_PORT', default='5432'),
     }
 }
