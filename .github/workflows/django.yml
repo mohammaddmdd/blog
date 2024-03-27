@@ -7,15 +7,14 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      localhost:
+      postgres:  # Use a descriptive name for the service
         image: postgres:14
         env:
-          POSTGRES_DB: localhost
+          POSTGRES_DB: postgres
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: 37182635
         ports:
           - 5432:5432
-        # Set health checks to wait until postgres is ready
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -33,6 +32,11 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run migrations
+      env:
+        DB_HOST: postgres  # Use the service name as the HOST
+        DB_NAME: postgres
+        DB_USER: postgres
+        DB_PASSWORD: 37182635
       run: |
         python manage.py migrate
     - name: Run tests
