@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  postgres:
+  db:
     image: postgres:14
     environment:
       POSTGRES_DB: postgres
@@ -19,11 +19,11 @@ services:
       DB_NAME: postgres
       DB_USER: postgres
       DB_PASSWORD: 37182635
-      DB_HOST: postgres
+      DB_HOST: db
       DB_PORT: 5432
       REDIS_URL: redis://redis:6379/1
     depends_on:
-      - postgres
+      - db
       - redis
   celery:
     build: .
@@ -34,7 +34,7 @@ services:
       DB_NAME: postgres
       DB_USER: postgres
       DB_PASSWORD: 37182635
-      DB_HOST: postgres
+      DB_HOST: db
       DB_PORT: 5432
     depends_on:
       - web
