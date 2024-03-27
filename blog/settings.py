@@ -89,11 +89,11 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '37182635',
-        'HOST': 'postgres',  # Use the service name defined in GitHub Actions
-        'PORT': '5432',
+        'NAME': config('DB_NAME', default='postgres'),
+        'USER': config('DB_USER', default='postgres'),
+        'PASSWORD': config('DB_PASSWORD', default='your_password'),
+        'HOST': config('DB_HOST', default='postgres'),  # Service name as defined in docker-compose.yml
+        'PORT': config('DB_PORT', default='5432'),
     }
 }
 # Password validation
