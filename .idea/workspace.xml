@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06b81487-3f10-424b-9d83-cfc65cdc05db" name="Changes" comment="Set django.yml For Postgres Password">
+    <list default="true" id="06b81487-3f10-424b-9d83-cfc65cdc05db" name="Changes" comment="configuring  Redis service in GitHub Actions workflow">
       <change beforePath="$PROJECT_DIR$/.github/workflows/django.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/django.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,13 +221,22 @@
       <option name="project" value="LOCAL" />
       <updated>1711521981957</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="configuring  Redis service in GitHub Actions workflow">
+      <option name="closed" value="true" />
+      <created>1711522443270</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1711522443270</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add TestCeleryTask" />
     <MESSAGE value="Add Serializer Tests" />
     <MESSAGE value="Set django.yml For Postgres Password" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set django.yml For Postgres Password" />
+    <MESSAGE value="configuring  Redis service in GitHub Actions workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="configuring  Redis service in GitHub Actions workflow" />
   </component>
 </project>

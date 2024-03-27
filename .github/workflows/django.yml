@@ -10,11 +10,12 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_DB: postgres
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: 37182635
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
         ports:
           - 5432:5432
+        # Set health checks to wait until postgres is ready
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -25,25 +26,36 @@ jobs:
         image: redis
         ports:
           - 6379:6379
-        options: >-
-          --health-cmd "redis-cli ping"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
 
     steps:
     - uses: actions/checkout@v3
+
     - name: Set up Python 3.11
       uses: actions/setup-python@v4
       with:
         python-version: 3.11
+
     - name: Install dependencies
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
+
     - name: Run migrations
-      run: |
-        python manage.py migrate
+      env:
+        DB_NAME: postgres
+        DB_USER: postgres
+        DB_PASSWORD: postgres
+        DB_HOST: localhost
+        DB_PORT: 5432
+        REDIS_URL: 'redis://localhost:6379/1'
+      run: python manage.py migrate
+
     - name: Run tests
-      run: |
-        python manage.py test
+      env:
+        DB_NAME: postgres
+        DB_USER: postgres
+        DB_PASSWORD: postgres
+        DB_HOST: localhost
+        DB_PORT: 5432
+        REDIS_URL: 'redis://localhost:6379/1'
+      run: python manage.py test
