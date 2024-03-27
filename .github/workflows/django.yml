@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      postgres:  # Use a descriptive name for the service
+      postgres:
         image: postgres:14
         env:
           POSTGRES_DB: postgres
@@ -17,6 +17,16 @@ jobs:
           - 5432:5432
         options: >-
           --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
@@ -32,11 +42,6 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run migrations
-      env:
-        DB_HOST: postgres  # Use the service name as the HOST
-        DB_NAME: postgres
-        DB_USER: postgres
-        DB_PASSWORD: 37182635
       run: |
         python manage.py migrate
     - name: Run tests
