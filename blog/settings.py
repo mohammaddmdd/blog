@@ -89,14 +89,13 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '37182635',
-        'HOST': 'localhost',  # Localhost for local development
-        'PORT': '5432',
+        'NAME': config('DB_NAME', default='postgres'),
+        'USER': config('DB_USER', default='postgres'),
+        'PASSWORD': config('DB_PASSWORD', default='37182635'),
+        'HOST': config('DB_HOST', default='localhost'),  # Use 'db' for Docker-compose or 'localhost' for local
+        'PORT': config('DB_PORT', default='5432'),
     }
-}
-# Password validation
+}# Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [

@@ -7,7 +7,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 37182635
   redis:
-    image: "redis:alpine"
+    image: "redis:latest"
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
