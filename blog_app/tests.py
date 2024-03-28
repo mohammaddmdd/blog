@@ -1,4 +1,5 @@
 # blog/tests.py
+import pytest
 from django.test import TestCase
 from .models import Post, Comment
 from django.urls import reverse
@@ -6,7 +7,7 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
-
+from rest_framework.test import APIClient
 from .serializers import PostSerializer, CommentSerializer
 
 
@@ -90,3 +91,20 @@ class CommentSerializerTest(TestCase):
         data = self.serializer.data
         self.assertEqual(set(data.keys()), set(['id', 'post', 'parent', 'text', 'email', 'created_at',]))
 
+
+@pytest.mark.django_db
+def test_list_posts():
+    # Setup
+    client = APIClient()
+    Post.objects.create(title="Test Post 1", content="Test Content 1")
+    Post.objects.create(title="Test Post 2", content="Test Content 2")
+
+    # Execute
+    url = reverse('ninja_api:api-1.0.0-list_posts')
+    response = client.get(url)
+
+    # Assert
+    assert response.status_code == 200
+    assert len(response.json()) == 2
+    assert response.json()[0]['title'] == "Test Post 1"
+    assert response.json()[1]['title'] == "Test Post 2"

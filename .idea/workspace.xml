@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06b81487-3f10-424b-9d83-cfc65cdc05db" name="Changes" comment="configuring  Redis service in GitHub Actions workflow">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/urls.py" afterDir="false" />
+    <list default="true" id="06b81487-3f10-424b-9d83-cfc65cdc05db" name="Changes" comment="Integrate Django Ninja API with project URLs">
+      <change beforePath="$PROJECT_DIR$/blog_app/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_app/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +300,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711644688714</updated>
-      <workItem from="1711644690764" duration="5416000" />
+      <workItem from="1711644690764" duration="5718000" />
     </task>
     <task id="LOCAL-00031" summary="configuring  Redis service in GitHub Actions workflow">
       <option name="closed" value="true" />
@@ -312,7 +310,31 @@
       <option name="project" value="LOCAL" />
       <updated>1711660938719</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="configuring  Redis service in GitHub Actions workflow">
+      <option name="closed" value="true" />
+      <created>1711662799151</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1711662799151</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Add Django Ninja and schemas for posts">
+      <option name="closed" value="true" />
+      <created>1711662850724</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1711662850724</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Integrate Django Ninja API with project URLs">
+      <option name="closed" value="true" />
+      <created>1711662896073</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1711662896073</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,6 +345,8 @@
     <MESSAGE value="Add Serializer Tests" />
     <MESSAGE value="Set django.yml For Postgres Password" />
     <MESSAGE value="configuring  Redis service in GitHub Actions workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="configuring  Redis service in GitHub Actions workflow" />
+    <MESSAGE value="Add Django Ninja and schemas for posts" />
+    <MESSAGE value="Integrate Django Ninja API with project URLs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrate Django Ninja API with project URLs" />
   </component>
 </project>
